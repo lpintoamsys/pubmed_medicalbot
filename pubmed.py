@@ -19,7 +19,7 @@ llm = ChatOpenAI(model_name="gpt-4o", temperature=0.5, max_tokens=200)
 memory = ConversationBufferMemory(memory_key="pubmed_memory", return_messages=True)
 
 def search_pubmed(query, max_results=3):
-    """Search PubMed for articles related to a query."""
+    """Search PubMed for articles related to a query and finding mode details."""
     try:
         handle = Entrez.esearch(db="pubmed", term=query, retmax=max_results)
         record = Entrez.read(handle)
