@@ -1,0 +1,8 @@
+# Virtual environment files
+mvenv/
+.venv/
+env/
+.env/
+__pycache__/
+*.pyc
+.env
